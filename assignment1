@@ -1,0 +1,64 @@
+## 1
+list1=[]
+count=0
+number=input("enter number")   
+a=list(str(number))  
+for i in a:
+    count+=1    
+
+print(count)  
+for i in range (1,count+1):
+    list1.append(i*10)
+
+print(list1)
+list1.sort(reverse=True)
+for j in list1:
+    print(j)
+
+
+##2
+s1=str(input("enter the string"))
+s2=str(input("enter string to append in middle"))
+n=len(s1)
+mid=n//2
+print(s1[0:mid]+s2+s1[mid:])
+
+
+##3
+capital=[]   
+small=[]
+input_string=input("enter the string")
+for i in input_string:
+    if i.islower()==True:
+        small.append(i)
+    elif i.isupper()==True:
+        capital.append(i)
+
+str1=""
+print( str1.join(small+capital))
+
+
+##5
+list1=[]
+list2=[]
+odd=[]
+even=[]
+a=int(input("enter no of element in list:"))
+for i in range (0,a):
+    n1=int(input("enter number in lst1:"))
+    list1.append(n1)
+for j in range (0,a) :   
+    n2=int(input("enter number in lst2:"))
+    list2.append(n2)
+
+for i in range(0,len(list1)):
+    if(i%2==1):
+        odd.append(list1[i])
+    
+
+for j in range(0,len(list2)):
+    if(j%2==0):
+        even.append(list2[j])
+
+final=odd+even
+print(final)
