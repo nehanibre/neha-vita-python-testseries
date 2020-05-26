@@ -1,0 +1,109 @@
+def sort(l):
+    n=len(l)
+    for i in range (n-1) :
+        for j in range (n-i-1):
+            if l[j]>l[j+1]:
+                l[j],l[j+1]=l[j+1],l[j]
+
+l=[]
+a=input("enter thesize")
+for i in range(0,int(a)):
+    x=input("eneter no")
+    l.append(x)
+
+sort(l)
+for i in range(0,len(l)):
+    print(l[i])
+
+
+l3=[]
+l1=["M",'na','i','lak']
+l2=['y','me','s','han']
+for i in range(0,len(l1)):
+    for j in range(0,len(l2)):
+        if i==j:
+           a= l1[i]+l2[j]
+           l3.append(a)
+
+
+print(l3)
+
+roll_number=[47,64,69,37,76,83,95,97]
+sampledict={'john':47,'peter':64,'Mahi':37,"maria":76}
+c=[]
+
+
+for value in sampledict.values():
+    for i in roll_number:
+        if i==value:
+            c.append(i)
+
+for i in roll_number:
+    if i not in c:
+        roll_number.remove(i)
+
+print(roll_number)
+
+'''''''''''
+##Binary Search
+def sort(list1,key):
+    low=0
+    high=len(list1)-1
+    found=False
+    while low<=high and not found:
+        mid=(low+high)//2
+        if key==list1[mid]:
+            found=True
+        elif key>list1[mid]:
+            low=mid+1
+        else:
+            high=mid-1
+
+
+    if(found==True):
+        print("present")
+    else:
+        print("False")
+
+list1=[1,2,3,4,5,6,7]
+key=7
+
+
+sort(list1,key)
+
+
+''''
+
+Linear search
+
+def lsort(list1,a):
+    found=False
+    for i in list1:
+        if a==i:
+            found=True
+
+    if found==True:
+        print("present")
+    else:
+        print("not present")
+
+
+
+
+
+list1=[23,34,56,67]
+key=int(input("enter value"))
+lsort(list1,key)
+
+
+
+
+
+
+
+
+
+
+
+
+
