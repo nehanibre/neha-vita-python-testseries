@@ -1,0 +1,67 @@
+sampledict={'john':47,'peter':64,'Mahi':37,"maria":76}
+s={(values,key) for key,values in sampledict.items()}
+a=dict(s)
+print(a)
+
+
+
+print("key:values")
+for i in a:
+    print(i,":",a[i])
+
+
+
+
+
+list=[56,34,23,82,27]
+
+
+
+for i in range(len(list)):
+    min_value=min(list[i:])
+    a=list.index(min_value)
+    list[i],list[a]=list[a],list[i]
+
+print(list)
+
+
+'''''''
+list1 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "l"], "m",  "n"]
+a=list1[2][1][2]
+
+
+
+c=["h", "i", "j"]
+for j in c:
+    a.append(j)
+
+print(a)
+print(list1)
+
+
+
+'''''''''''
+sampleDict = {
+    "class":{
+        "student":{
+            "name":"Mike",
+            "marks":{
+                "physics":70,
+                "history":80
+            }
+        }
+    }
+}
+print(sampleDict['class']['student']['marks']['history'])
+
+
+
+
+
+
+
+
+
+
+
+
